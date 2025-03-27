@@ -10,7 +10,71 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@500;700&family=Roboto+Mono:wght@700&family=Sora:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- styles  -->
+    <link rel="stylesheet" href="styles.css" />
     <title>Sorteador de Números</title>
   </head>
-  <body></body>
+  <body>
+    <section class="content-all">
+      <header>
+        <img src="/imgs/logonumbers.png" alt="Logo Sorteador" />
+      </header>
+
+      <main>
+        <section class="content-left">
+          <h2>Online - gratuito</h2>
+          <h1>Sorteador de números</h1>
+          <div class="questions">
+            <div class="question">
+              <span class="icon"><img src="/imgs/userq.png" alt="" /></span>
+              <p class="question-text">Como funciona o sorteador de números?</p>
+              <p class="answer">
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
+              </p>
+            </div>
+            <div class="question">
+              <span class="icon"><img src="/imgs/userq.png" alt="" /></span>
+              <p class="question-text">
+                Posso escolher o intervalo dos números?
+              </p>
+              <p class="answer">
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-right">
+          <h2>Quero sortear:</h2>
+          <p>
+            Defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+          <div class="inputs">
+            <label for="quantidade">NÚMEROS</label>
+            <input type="text" id="quantidade" placeholder="Ex: 5" />
+            <label for="min">DE</label>
+            <input type="text" id="min" placeholder="Ex: 1" />
+            <label for="max">DE</label>
+            <input type="text" id="max" placeholder="Ex: 100" />
+          </div>
+
+          <div class="toggle-container">
+            <label class="switch">
+              <input type="checkbox" id="no-repeat" />
+              <span class="slider"></span>
+            </label>
+            <span>Não repetir número</span>
+          </div>
+
+          <button id="sortear">Sortear</button>
+
+          <div id="resultado"></div>
+        </section>
+      </main>
+    </section>
+    <script src="scripts.js"></script>
+  </body>
 </html>
