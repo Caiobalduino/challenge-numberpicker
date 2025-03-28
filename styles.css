@@ -122,6 +122,22 @@ inputs-r {
   flex-direction: column;
 }
 
+.inputs-r input {
+  padding: 8px;
+  border: 2px solid #3d3d3d;
+  border-radius: 8px;
+  outline: none;
+  transition: border 1s ease-in-out;
+}
+
+.inputs-r input:focus {
+  border-image-source: linear-gradient(90deg, #d586e0 0%, #91a1fa 98.93%);
+  border-radius: 8px;
+  transition: border 1s ease-in-out;
+
+  border-image-slice: 1;
+}
+
 label {
   font-family: "Roboto Flex", sans-serif;
   display: block;
@@ -213,7 +229,25 @@ button {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #d586e0 0%, #91a1fa 98.93%);
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 button:hover {
+  background: #020202;
+  transition: 0.5s ease-in-out;
 }
